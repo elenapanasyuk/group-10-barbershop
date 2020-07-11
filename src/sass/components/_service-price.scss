@@ -80,18 +80,20 @@
     background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   }
 }
-
-.make-appoitment {
+.price-button {
   @extend %button;
-
-  color: $primary-white-color;
+  @extend %link;
+  width: 160px;
   position: relative;
   margin: 0 auto;
   margin-top: 50px;
+  color: $primary-white-color;
+  @include transitionII(color, background-color);
 
-  &:hover {
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
     background-color: $accent-color;
-    // transition: $property 300ms linear;
   }
 }
 
