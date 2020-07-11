@@ -7,7 +7,8 @@
 /* цвет текста в описании секций #555555 */
 /* цвет плейсхолдеров в форме rgba(157, 164, 189, 0.4) */
 /* акцент #FF6C00 */
-.examples-list, .contacts__tel, .social__link, .header-social-link, .header-contacts-item, .header-nav-link {
+.examples-list, .contacts__direction,
+.contacts__tel, .social__link, .header-social-link, .header-contacts-item, .header-nav-link {
   text-decoration: none;
 }
 
@@ -20,7 +21,7 @@
   list-style: none;
 }
 
-.make-appoitment, .button-about-us, .header-button {
+.make-appoitment, .button-about-us, .form__button, .header-button {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -703,13 +704,19 @@ header > .container {
 .footer.container {
   padding: 0;
 }
+@media screen and (min-width: 1200px) {
+  .footer.container {
+    max-width: 1280px;
+  }
+}
 .footer__basement {
   padding-top: 44px;
   padding-bottom: 44px;
   background-color: #f7f7f7;
 }
 .footer__copyright {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-bottom: 0;
   font-weight: 600;
   font-size: 11px;
@@ -720,6 +727,17 @@ header > .container {
 @media screen and (max-width: 767px) {
   .footer__copyright {
     margin-top: 20px;
+  }
+}
+
+.copyright__icon {
+  display: block;
+  margin-right: 6px;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
   }
 }
 
@@ -739,12 +757,25 @@ header > .container {
 .social__item:not(:first-child) {
   margin-left: 40px;
 }
+.social__item:first-child {
+  display: flex;
+  align-items: center;
+}
+.social__item:first-child::before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  margin-right: 20px;
+}
 .social__link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  transition: color 300ms linear;
 }
 .social__link:hover, .social__link:focus {
   color: #ff6c00;
@@ -753,6 +784,13 @@ header > .container {
 .form {
   padding-left: 31px;
   padding-right: 31px;
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 655px;
+    padding-left: 55px;
+    padding-right: 40px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -857,48 +895,70 @@ header > .container {
   color: #ffffff;
 }
 
+.form__button {
+  color: #ffffff;
+  transition: color 300ms linear, background-color 300ms linear;
+}
 @media screen and (max-width: 767px) {
   .form__button {
-    display: block;
     margin-left: auto;
     margin-right: auto;
   }
+}
+.form__button:hover, .form__button:focus {
+  color: #ffffff;
+  background-color: #ff6c00;
 }
 
 .contacts {
   padding-left: 31px;
   padding-right: 31px;
   max-width: 480px;
-  background-image: url("/contacts-bg-img-480.dcc37a90.png");
+  background-image: url("/contacts-bg-img-480.f88b2f60.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
   .contacts {
-    background-image: url("/contacts-bg-img-960.a1e59651.png");
+    background-image: url("/contacts-bg-img-480@2x.c88b2101.png");
   }
 }
 @media screen and (min-width: 768px) {
   .contacts {
     max-width: 768px;
-    background-image: url("/contacts-bg-img-768.68766e7b.png");
+    padding-left: 40px;
+    padding-right: 40px;
+    background-image: url("/contacts-bg-img-768.60e6d5e7.png");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .contacts {
-    background-image: url("/contacts-bg-img-1536.318ea0ac.png");
+    background-image: url("/contacts-bg-img-768@2x.29b57c43.png");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    max-width: 1200px;
+    flex-basis: 625px;
+    padding-left: 100px;
+    background-image: url("/contacts-bg-img-625.396746f5.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .contacts {
+    background-image: url("/contacts-bg-img-625@2x.b55baebc.png");
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts__main-box {
     display: flex;
     align-items: flex-start;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contacts__box {
     width: calc(50% - 15px);
   }
@@ -919,43 +979,53 @@ header > .container {
   }
 }
 
-.contacts__direction {
-  display: block;
-  margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: #9da4bd;
-}
 @media screen and (min-width: 768px) {
   .contacts__direction {
-    max-width: 200px;
+    max-width: 250px;
   }
 }
 
+.contacts__direction,
+.contacts__tel {
+  margin-bottom: 20px;
+}
+
+.contacts__direction,
 .contacts__tel,
 .contacts__mail {
-  display: block;
-  margin-bottom: 20px;
+  display: flex;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
+  transition: color 300ms linear;
 }
-.contacts__tel:hover, .contacts__tel:focus,
+.contacts__direction:hover, .contacts__direction:focus,
+.contacts__tel:hover,
+.contacts__tel:focus,
 .contacts__mail:hover,
 .contacts__mail:focus {
   color: #ff6c00;
 }
 
-@media screen and (min-width: 768px) {
+.contacts__icon {
+  display: block;
+  width: 100%;
+  max-width: 24px;
+  stroke: currentColor;
+  margin-right: 16px;
+  margin-top: 3px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .schedule {
     width: calc(50% - 15px);
     margin-left: auto;
   }
 }
 .schedule__title {
-  display: block;
+  display: flex;
+  align-items: center;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 600;
@@ -965,9 +1035,22 @@ header > .container {
   text-transform: uppercase;
   color: #ffffff;
 }
+.schedule__title::before {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.4);
+  margin-right: 20px;
+}
 @media screen and (max-width: 767px) {
   .schedule__title {
     margin-top: 44px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .schedule__title {
+    margin-top: 70px;
   }
 }
 .schedule__work-time {
