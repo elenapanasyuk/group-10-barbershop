@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/menu.js":[function(require,module,exports) {
+},{"./../images/contacts-bg-img-480.png":[["contacts-bg-img-480.dcc37a90.png","images/contacts-bg-img-480.png"],"images/contacts-bg-img-480.png"],"./../images/contacts-bg-img-960.png":[["contacts-bg-img-960.a1e59651.png","images/contacts-bg-img-960.png"],"images/contacts-bg-img-960.png"],"./../images/contacts-bg-img-768.png":[["contacts-bg-img-768.68766e7b.png","images/contacts-bg-img-768.png"],"images/contacts-bg-img-768.png"],"./../images/contacts-bg-img-1536.png":[["contacts-bg-img-1536.318ea0ac.png","images/contacts-bg-img-1536.png"],"images/contacts-bg-img-1536.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/menu.js":[function(require,module,exports) {
 (function () {
   var menuBtnRef = document.querySelector('[data-menu-button]');
   var mobileMenuRef = document.querySelector('[data-menu]');
@@ -234,7 +234,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63665" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51168" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
