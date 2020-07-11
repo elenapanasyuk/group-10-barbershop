@@ -1,6 +1,12 @@
 .form {
   padding-left: 31px;
   padding-right: 31px;
+
+  @media screen and (min-width: $desktop) {
+    width: 655px;
+    padding-left: 55px;
+    padding-right: 40px;
+  }
 }
 
 .form__box {
@@ -13,13 +19,14 @@
 .form__title {
   margin-top: 0;
   margin-bottom: 44px;
+  font-family: $heading-font;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: $primary-white-color;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     text-align: center;
   }
 }
@@ -29,7 +36,7 @@
   display: block;
   width: 100%;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $tablet - 1px) {
     margin-bottom: 44px;
   }
 
@@ -114,9 +121,18 @@
 }
 
 .form__button {
-  @media screen and (max-width: 767px) {
-    display: block;
+  @extend %button;
+  color: $primary-white-color;
+  @include transitionII(color, background-color);
+
+  @media screen and (max-width: $tablet - 1px) {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
   }
 }
