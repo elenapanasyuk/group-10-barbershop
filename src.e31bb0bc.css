@@ -1141,7 +1141,7 @@ header > .container {
   bottom: 7px;
 }
 
-.section {
+.section.services-prices {
   outline: 1px solid black;
   background-image: url(/pricemob.d70ec8e4.png), url(/bgpricemob.e54356d9.jpg);
   background-repeat: no-repeat;
@@ -1149,29 +1149,29 @@ header > .container {
   background-size: cover;
 }
 @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
-  .section {
+  .section.services-prices {
     background-image: url(/pricemob.d70ec8e4.png), url(/bgpricemob@2x.c1b4bcbe.jpg);
   }
 }
 @media screen and (min-width: 768px) {
-  .section {
+  .section.services-prices {
     width: 768px;
     background-image: url(/pricetab.11d8da6d.png), url(/bgpricetab.7a7b4513.jpg);
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .section {
+  .section.services-prices {
     background-image: url(/pricetab.11d8da6d.png), url(/bgpricetab@2x.da7c5859.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
-  .section {
+  .section.services-prices {
     width: 1200px;
     background-image: url(/pricedesctop.22e97e6b.png), url(/bgpricedesctop.e84c2243.jpg);
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .section {
+  .section.services-prices {
     background-image: url(/pricedesctop.22e97e6b.png), url(/bgpricedesctop@2x.6a2d1729.jpg);
   }
 }
