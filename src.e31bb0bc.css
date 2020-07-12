@@ -8,7 +8,7 @@
 /* цвет плейсхолдеров в форме rgba(157, 164, 189, 0.4) */
 /* акцент #FF6C00 */
 .examples-list, .contacts__direction,
-.contacts__tel, .social__link, .header-social-link, .header-contacts-item, .header-nav-link {
+.contacts__tel, .social__link, .header-social-link, .header-button, .header-contacts-item, .header-nav-link {
   text-decoration: none;
 }
 
@@ -60,6 +60,10 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 .container {
@@ -305,7 +309,6 @@ header > .container {
 }
 .header-nav-link:hover, .header-nav-link:focus {
   color: #ff6c00;
-  outline: none;
 }
 
 .header-contacts {
@@ -354,7 +357,6 @@ header > .container {
 }
 .header-contacts-item:hover, .header-contacts-item:focus {
   color: #ff6c00;
-  outline: none;
 }
 
 .header-button {
@@ -380,7 +382,6 @@ header > .container {
 .header-button:hover, .header-button:focus {
   color: #ffffff;
   background-color: #ff6c00;
-  outline: none;
 }
 
 @media screen and (max-width: 767px) {
@@ -442,7 +443,6 @@ header > .container {
 }
 .header-social-link:hover, .header-social-link:focus {
   color: #ff6c00;
-  outline: none;
 }
 
 .hero {
@@ -698,17 +698,21 @@ header > .container {
   background-color: #ffffff;
 }
 
-.footer {
+.form-and-contacts__container {
+  padding: 0;
   background-color: #191c26;
 }
-.footer.container {
-  padding: 0;
-}
 @media screen and (min-width: 1200px) {
-  .footer.container {
+  .form-and-contacts__container {
     max-width: 1280px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .form-and-contacts__container {
+    display: flex;
+  }
+}
+
 .footer__basement {
   padding-top: 44px;
   padding-bottom: 44px;
@@ -733,12 +737,6 @@ header > .container {
 .copyright__icon {
   display: block;
   margin-right: 6px;
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__container {
-    display: flex;
-  }
 }
 
 @media screen and (min-width: 768px) {
@@ -803,6 +801,7 @@ header > .container {
 .form__title {
   margin-top: 0;
   margin-bottom: 44px;
+  font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.17;
@@ -1028,6 +1027,7 @@ header > .container {
   align-items: center;
   margin-top: 0;
   margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
