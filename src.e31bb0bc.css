@@ -365,18 +365,12 @@ header > .container {
 }
 @media screen and (max-width: 767px) {
   .header-button {
-    max-width: 194px;
     color: #303030;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .header-button {
     margin-bottom: 8px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header-button {
-    width: 160px;
   }
 }
 .header-button:hover, .header-button:focus {
@@ -631,6 +625,7 @@ header > .container {
   height: 3px;
   background-color: #9da4bd;
   cursor: pointer;
+  transition: width 300ms linear, background-color 300ms linear;
 }
 
 .hero-radio-list input:checked + label::before {
@@ -671,31 +666,31 @@ header > .container {
   background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-.hero-button.back {
   color: rgba(157, 164, 189, 0.6);
+  transition: color 300ms linear;
 }
-.hero-button.back::after {
+.hero-button::after {
   margin-top: 8px;
   content: "";
   display: inline-block;
   width: 60px;
   height: 1px;
   background-color: rgba(157, 164, 189, 0.6);
+  transition: background-color 300ms linear;
 }
-
-.hero-button.forward {
-  align-items: flex-end;
+.hero-button:hover, .hero-button:focus {
   color: #ffffff;
 }
-.hero-button.forward::after {
-  margin-top: 8px;
+.hero-button:hover::after, .hero-button:focus::after {
   content: "";
   display: inline-block;
   width: 60px;
   height: 1px;
   background-color: #ffffff;
+}
+
+.forward {
+  align-items: flex-end;
 }
 
 .form-and-contacts__container {
