@@ -2,10 +2,12 @@
 // .form-and-contacts {
 //   background-color: $form-background;
 // }
-
+.form-and-contacts {
+  background-color: $form-background;
+}
 .form-and-contacts__container {
-  padding: 0;
-  background-color: $form-background; //Закоментити якщо треба щоб темна секція тягнулась на весь екран
+  /*  padding: 0; */
+  /*  background-color: $form-background; */ //Закоментити якщо треба щоб темна секція тягнулась на весь екран
   @media screen and (min-width: $desktop) {
     max-width: 1280px;
   }
