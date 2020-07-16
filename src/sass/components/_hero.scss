@@ -36,11 +36,18 @@
   @media screen and (min-width: $tablet) {
     margin: 0px 0px 0px auto;
   }
+
+  @media screen and (min-width: $desktop) and (max-width: 1279px) {
+    position: relative;
+    left: 95px;
+
+    margin: 0px;
+  }
 }
 .hero-img-list li {
   position: relative;
 }
-.hero-img-list div {
+.hero-img-item-overlay {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -53,11 +60,22 @@
   }
 
   @media screen and (min-width: $desktop) {
-    left: 75px;
+    left: 95px;
+  }
+  /*   @for $i from 1221 to 1280 {
+    @media screen and (min-width: $i * 1px) {
+      right: $i - 1220px;
+    }
+  } */
+  @for $i from 1200 to 1280 {
+    @media screen and (min-width: $i * 1px) {
+      right: $i - 1220px;
+    }
   }
 
   @media screen and (min-width: 1280px) {
     left: 155px;
+    right: 0px;
   }
 }
 /* .slider-image1,
