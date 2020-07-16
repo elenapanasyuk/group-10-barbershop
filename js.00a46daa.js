@@ -184,12 +184,30 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"swiper-bundle.css":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../images/contacts/contacts-bg-img-480.png":[["contacts-bg-img-480.f88b2f60.png","images/contacts/contacts-bg-img-480.png"],"images/contacts/contacts-bg-img-480.png"],"./../images/contacts/contacts-bg-img-480@2x.png":[["contacts-bg-img-480@2x.c88b2101.png","images/contacts/contacts-bg-img-480@2x.png"],"images/contacts/contacts-bg-img-480@2x.png"],"./../images/contacts/contacts-bg-img-768.png":[["contacts-bg-img-768.60e6d5e7.png","images/contacts/contacts-bg-img-768.png"],"images/contacts/contacts-bg-img-768.png"],"./../images/contacts/contacts-bg-img-768@2x.png":[["contacts-bg-img-768@2x.29b57c43.png","images/contacts/contacts-bg-img-768@2x.png"],"images/contacts/contacts-bg-img-768@2x.png"],"./../images/contacts/contacts-bg-img-625.png":[["contacts-bg-img-625.396746f5.png","images/contacts/contacts-bg-img-625.png"],"images/contacts/contacts-bg-img-625.png"],"./../images/contacts/contacts-bg-img-625@2x.png":[["contacts-bg-img-625@2x.b55baebc.png","images/contacts/contacts-bg-img-625@2x.png"],"images/contacts/contacts-bg-img-625@2x.png"],"/Users/elenapanasuk/Downloads/HW/barbershop/group-10-barbershop/src/images/pricemob.png":[["pricemob.d70ec8e4.png","images/pricemob.png"],"images/pricemob.png"],"/Users/elenapanasuk/Downloads/HW/barbershop/group-10-barbershop/src/images/pricemob@2x.png":[["pricemob@2x.9cf6a87d.png","images/pricemob@2x.png"],"images/pricemob@2x.png"],"/Users/elenapanasuk/Downloads/HW/barbershop/group-10-barbershop/src/images/pricetab.png":[["pricetab.11d8da6d.png","images/pricetab.png"],"images/pricetab.png"],"/Users/elenapanasuk/Downloads/HW/barbershop/group-10-barbershop/src/images/pricetab@2x.png":[["pricetab@2x.a313a4f6.png","images/pricetab@2x.png"],"images/pricetab@2x.png"],"/Users/elenapanasuk/Downloads/HW/barbershop/group-10-barbershop/src/images/pricedesctop.png":[["pricedesctop.22e97e6b.png","images/pricedesctop.png"],"images/pricedesctop.png"],"/Users/elenapanasuk/Downloads/HW/barbershop/group-10-barbershop/src/images/pricedesctop@2x.png":[["pricedesctop@2x.5c725b9c.png","images/pricedesctop@2x.png"],"images/pricedesctop@2x.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"js/menu.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector('[data-menu-button]');
+  var mobileMenuRef = document.querySelector('[data-menu]');
+  menuBtnRef.addEventListener('click', function () {
+    var expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+    menuBtnRef.classList.toggle('is-open');
+    menuBtnRef.setAttribute('aria-expanded', !expanded);
+    mobileMenuRef.classList.toggle('is-open');
+    document.body.classList.toggle('menu-open');
+  });
+})();
+},{}],"js/index.js":[function(require,module,exports) {
+"use strict";
+
+require("../sass/main.scss");
+
+require("../js/menu.js");
+},{"../sass/main.scss":"sass/main.scss","../js/menu.js":"js/menu.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +411,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/swiper-bundle.bd2d2058.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/index.js"], null)
+//# sourceMappingURL=/js.00a46daa.js.map
