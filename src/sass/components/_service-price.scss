@@ -24,30 +24,45 @@
   color: $primary-white-color;
 }
 
+.price-list-box {
+  @media screen and (max-width: 1199px) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
 .price-list {
   @extend %list;
   display: block;
-  padding: 30px;
-  margin-top: 44px;
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  padding-right: 30px;
+  padding-left: 30px;
+
   @media screen and (min-width: $tablet) {
     padding-left: 40px;
     padding-right: 40px;
   }
+
   @media screen and (min-width: $desktop) {
     display: flex;
-    padding: 0px;
-    background: none;
+    flex-direction: column;
+    width: 585px;
   }
 }
-.column-left {
+
+.price-list.column-left {
+  margin-top: 44px;
+  padding-top: 30px;
+
   & .price-item {
     margin-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 30px 40px;
-    width: 585px;
+    padding-bottom: 30px;
     background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 
     & .price-item:last-child {
@@ -56,14 +71,15 @@
   }
 }
 
-.column-right {
+.price-list.column-right {
+  padding-bottom: 30px;
+
   & .price-item:not(:last-child) {
     margin-bottom: 20px;
   }
 
   @media screen and (min-width: $desktop) {
-    padding: 30px 40px;
-    width: 585px;
+    padding-top: 30px;
     background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
   }
 }
